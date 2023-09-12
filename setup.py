@@ -1,3 +1,4 @@
+import json
 import os
 from setuptools import setup
 
@@ -5,6 +6,15 @@ from setuptools import setup
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
+def locked_requirements(section):
+    with open("Pipfile.lock", "r", encoding="utf8") as pip_file:
+        pipfile = json.load(pip_file)
+
+    if section not in pipfile:
+        print("{0} section missing from Pipfile.lock".format(section))
+        return []
+
+    return [package + detail.get('version', "") for package, detail in pipfile[section].items()]
 
 setup(
     name="pybughive",
@@ -27,4 +37,5 @@ setup(
             'pybughive=pybughive:main',
         ],
     },
+    install_requires=locked_requirements('default'),
 )
