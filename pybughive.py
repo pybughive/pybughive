@@ -32,7 +32,7 @@ if INSTALL_DIRECTORY is None:
 
 try:
     client = pymongo.MongoClient(MONGO_URL, serverSelectionTimeoutMS=100)
-    db = client['python_db']['bug_data']
+    db = client['pybughive']['bug_data']
     db.find_one()
 except ServerSelectionTimeoutError:
     print('Mongo server connection refused, exiting...')
