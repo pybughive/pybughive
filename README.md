@@ -29,8 +29,12 @@ Before PyBugHive can be used, it needs to be configured by setting the INSTALL_D
 
 1. Add them to the system’s environment variables.
 2. Create a .env file in the PyBugHive project root and add the above variables to it.
-3. Same as 2), but with a config.py file. We offer a Docker image with everything pre-installed, which further helps with an isolated run of PyBugHive. Moreover, we provide an installer script (setup.sh) that installs all required Python versions and other dependencies needed to successfully run any bug presented in our database. However, for better isolation, we recommend using the Docker environment.
-  
+3. Same as 2), but with a config.py file. 
+
+We offer a Docker image with everything pre-installed, which further helps with an isolated run of PyBugHive. Moreover, we provide an installer script (setup.sh) that installs all required Python versions and other dependencies needed to successfully run any bug presented in our database. 
+
+We also provide a setup.py which can be used to install pybughive on the system, making it easier to use it. When using the tool this way, we recommend setting environment variables instead of creating .env or config.py files.
+
 ## Offline version
 A major concern for bug databases is to continuously ensure
 the reproducibility of bugs, for example, due to
