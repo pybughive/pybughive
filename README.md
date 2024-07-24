@@ -2,7 +2,7 @@
 
 ## Projects
 
-PyBugHive is a benchmark of 105 real, manually validated bugs from 10 Python projects:
+PyBugHive is a benchmark of 149 real, manually validated bugs from 11 Python projects:
 
 * [psf/black](https://github.com/psf/black)
 * [cookiecutter/cookiecutter](https://github.com/cookiecutter/cookiecutter)
@@ -14,6 +14,7 @@ PyBugHive is a benchmark of 105 real, manually validated bugs from 10 Python pro
 * [saltstack/salt](https://github.com/saltstack/salt)
 * [scrapy/scrapy](https://github.com/scrapy/scrapy)
 * [explosion/spaCy](https://github.com/explosion/spaCy)
+* [google/jax](https://github.com/google/jax)
 
 ## Using PyBugHive
 Using PyBugHive is straightforward as all commands (besides the clean command) follow the same pattern: python pybughive.py {command} {project}-{issue}, where {project} is the name of the selected project’s repository and {issue} is the number of the selected issue. The possible commands are the following:
