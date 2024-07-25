@@ -1,4 +1,4 @@
-# PyBugHive
+# PyBugHive version 2.0.0
 
 ## Projects
 
@@ -17,7 +17,9 @@ PyBugHive is a benchmark of 149 real, manually validated bugs from 11 Python pro
 * [google/jax](https://github.com/google/jax)
 
 ## Using PyBugHive
-Using PyBugHive is straightforward as all commands (besides the clean command) follow the same pattern: python pybughive.py {command} {project}-{issue}, where {project} is the name of the selected project’s repository and {issue} is the number of the selected issue. The possible commands are the following:
+Using PyBugHive is straightforward as all commands (besides the clean command) follow the same pattern: `python pybughive.py {command} {project}-{issue}`, where `{project}` is the name of the selected project’s repository and `{issue}` is the number of the selected issue.
+
+The possible commands are the following:
 
 * checkout: Clones the selected repository and checks out the appropriate commit hash. This should be the first command when using this tool.
 * install: Searches for the appropriate install steps and runs them. This should be the second command.
