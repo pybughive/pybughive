@@ -2752,7 +2752,7 @@
                 ],
                 "manuallyChecked": true,
                 "installSteps": "pipenv --python 3.7\npipenv install setuptools==68.0.0\npipenv install\npipenv install click==8.0.2\npipenv install pytest==6.2.5",
-                "testSteps": "ppipenv run ython setup.py test",
+                "testSteps": "pipenv run python setup.py test",
                 "testStepsFull": "pipenv run python setup.py test"
             },
             {
