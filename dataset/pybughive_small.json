@@ -176,7 +176,7 @@
       "testStepsFull": "pipenv run pytest"
     }
   ],
-  "installSteps": "pipenv --python 3.8\npipenv install -r test_requirements.txt\npipenv run python setup.py install"
+  "installSteps": "pipenv --python 3.8\npipenv install -r test_requirements.txt\npipenv run python setup.py install\npipenv install 'click<8.2'\npipenv install 'binaryornot==0.4.4'"
 },
 {
   "_id": "648981e2d97326f515359962",
@@ -710,5 +710,5 @@
       "testSteps": "poetry run pytest tests/installation/test_installer.py\npoetry run pytest tests/packages/test_locker.py "
     }
   ],
-  "installSteps": "pipx install poetry==1.2.0 --force\npoetry env use python3.8\npoetry install"
+  "installSteps": "pipx install poetry==1.2.0 --force\npoetry env use python3.8\npoetry install\npoetry run pip install 'setuptools<71'"
 }]
